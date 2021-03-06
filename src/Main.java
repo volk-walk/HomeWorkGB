@@ -2,14 +2,16 @@ public class Main
 {
     public static void main(String[] args)
     {
-        Dogs dog1 = new Dogs("Вовчик");
-        dog1.run(250);
-        dog1.swim(10);
-        Cats cat1 = new Cats("Чирик");
-        cat1.run(100);
-        cat1.swim(0);
-        Dogs dog2 = new Dogs("мистер Пиглс");
-        dog2.run(250);
-        dog2.swim(9);
+        Cat[] catsArray = new Cat[4];
+        catsArray[0] = new Cat("Дуся", 13,false);
+        catsArray[1] = new Cat("Вася", 11,false);
+        catsArray[2] = new Cat("Игнат", 14,false);
+        catsArray[3] = new Cat("Захар", 16,false);
+        Plate plate = new Plate(50);
+        plate.info();
+        for (int i =0; i < catsArray.length; i++) {
+            catsArray[i].eat(plate);
+            plate.info();
+        }
     }
 }
